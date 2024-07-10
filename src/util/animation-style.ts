@@ -97,14 +97,14 @@ export const animationStyle = ({
 export const styles = (
     animation: string | undefined,
     color: string | undefined,
-    size: number | undefined,
+    size: number | 6,
     dynamicSize: Animated.Value | undefined
 ): any => {
 
     const defaultStyles = {
         position: "absolute",
         backgroundColor: color,
-        borderRadius: 100,
+        borderRadius: parseInt(String(size * .2)),
     }
 
     const defaultStylesWithSize = {
